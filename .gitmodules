@@ -1,3 +1,0 @@
-[submodule "src/main/webapp/WEB-INF/ref-html"]
-	path = src/main/webapp/WEB-INF/ref-html
-	url = https://github.com/perusworld/mcdevapi-spendingpulse-refimpl-web.git
