@@ -30,7 +30,7 @@ mvn -Djetty.http.port=3000 -Dmastercard.api.p12.path="file:///C:/path-to-p12-fil
 mvn clean package
 ```
 
-## Test App ## 
+## Test App ##
 Open browser and goto [http://localhost:3000](http://localhost:3000)
 
 ## Test REST APIs -cURL ##
