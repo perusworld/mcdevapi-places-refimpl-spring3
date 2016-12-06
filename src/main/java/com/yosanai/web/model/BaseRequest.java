@@ -8,6 +8,9 @@ public class BaseRequest {
 	protected int currentRow;
 	protected int offset;
 
+	protected int pageLength;
+	protected int pageOffset;
+
 	public BaseRequest() {
 	}
 
@@ -25,6 +28,22 @@ public class BaseRequest {
 
 	public void setOffset(int offset) {
 		this.offset = offset;
+	}
+
+	public int getPageLength() {
+		return pageLength;
+	}
+
+	public void setPageLength(int pageLength) {
+		this.pageLength = pageLength;
+	}
+
+	public int getPageOffset() {
+		return pageOffset;
+	}
+
+	public void setPageOffset(int pageOffset) {
+		this.pageOffset = pageOffset;
 	}
 
 }

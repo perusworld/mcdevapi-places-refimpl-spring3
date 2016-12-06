@@ -1,7 +1,7 @@
-# Mastercard Developer API - Merchant ID - Reference Implementation - Angular/Spring 3.x #
-Spring 3.x/Maven/Angular based reference implementation of Mastercard Developer API - Merchant ID 
+# Mastercard Developer API - Places - Reference Implementation - Angular/Spring 3.x #
+Spring 3.x/Maven/Angular based reference implementation of Mastercard Developer API - Places 
 
-## [Demo](https://perusworld.github.io/mcdevapi-merchantid-refimpl-web/) ##
+## [Demo](https://perusworld.github.io/mcdevapi-places-refimpl-web/) ##
 
 ## Requirements ##
 1. JDK 1.7+
@@ -10,7 +10,7 @@ Spring 3.x/Maven/Angular based reference implementation of Mastercard Developer 
    
 
 ## Setup Client App (optional if you want to host the sample client app) ##
-This setups up the same client app that is being used in [Mastercard Developer API - Merchant ID - Reference Implementation - Angular/Express](https://github.com/perusworld/mcdevapi-merchantid-refimpl-web)
+This setups up the same client app that is being used in [Mastercard Developer API - Places - Reference Implementation - Angular/Express](https://github.com/perusworld/mcdevapi-places-refimpl-web)
 
 ```bash
 git submodule init
@@ -34,9 +34,39 @@ mvn clean package
 Open browser and goto [http://localhost:3000](http://localhost:3000)
 
 ## Test REST APIs -cURL ##
-### Query using merchantId sent as part of JSON post ###
+### Query Merchant Category Codes ###
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
-	"merchantId": "MICROSOFT"
-}' "http://localhost:3000/query"
+	"isMCC": "true"
+}' "http://localhost:3000/mcc"
+```
+
+### Query Merchant Industries ###
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+	"isInd": "true"
+}' "http://localhost:3000/industries"
+```
+
+### Query detailed information on merchants using distance/state/country sent as part of JSON post ###
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+    "pageLength": 100,
+    "countryCode": "USA",
+    "pageOffset": 0,
+    "radiusSearch": false,
+    "unit": "m",
+    "distance": 15,
+    "stateProvidenceCode": "AZ"
+}' "http://localhost:3000/poi"
+```
+
+### Query a geo-coordinate, latitude and longitude, point for a specified address location ###
+```bash
+curl -X POST -H "Content-Type: application/json" -H "Cache-Control: no-cache" -d '{
+    "cityName": "O FALLON",
+    "countryCode": "USA",
+    "postalCode": "63368",
+    "addressLine1": "2254 HIGHWAY K"
+}' "http://localhost:3000/geo"
 ```
