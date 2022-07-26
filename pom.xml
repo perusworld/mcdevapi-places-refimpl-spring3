@@ -12,7 +12,7 @@
 		<jettyVersion>9.3.9.v20160517</jettyVersion>
 		<servletVersion>2.5</servletVersion>
 		<springVersion>5.3.18</springVersion>
-		<jacksonVersion>2.9.10.8</jacksonVersion>
+		<jacksonVersion>2.12.6.1</jacksonVersion>
 		<placesVersion>1.0.3</placesVersion>
 		<junitVersion>4.13.1</junitVersion>
 	</properties>
