@@ -11,7 +11,7 @@
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<jettyVersion>9.3.9.v20160517</jettyVersion>
 		<servletVersion>2.5</servletVersion>
-		<springVersion>5.3.18</springVersion>
+		<springVersion>6.1.13</springVersion>
 		<jacksonVersion>2.12.7.1</jacksonVersion>
 		<placesVersion>1.0.3</placesVersion>
 		<junitVersion>4.13.1</junitVersion>
